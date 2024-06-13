@@ -1,23 +1,83 @@
-import logo from './logo.svg';
 import './App.css';
-
+import MovieAdd from './composants /MovieAdd';
+import MovieList from './composants /MovieList';
+import MovieSearch from './composants /MovieSearch';
+import AsideMovie from './composants /AsideMovie'
+import {movies} from "./data"
+import { useState } from 'react';
+import './App.css'
+import TopBar from './composants /TopBar';
+import Footer from './composants /Footer';
+import TitleBar from './composants /TitleBar';
 function App() {
+
+  const [movieList,setMovieList]=useState(movies)
+
+  console.log('movieList',movieList)
+
+
+const removeMovie=(idM)=>{
+setMovieList(
+  movieList.filter((el)=> el.id !== idM)
+)
+}
+
+const addMovie=(newMovie)=>{
+  setMovieList([...movieList,newMovie])
+}
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+
+<>
+  <div className="window-margin">
+    <div className="window">
+    <AsideMovie/>
+      <div className="main" role="main">
+      <TopBar/>
+             <div className="movie-list">
+         <TitleBar/>
+          
+
+
+
+
+
+         <MovieSearch/> 
+
+
+<MovieList removeMovie={removeMovie}  movieList={movieList} />
+
+<MovieAdd  addMovie={addMovie}   /> 
+
+
+
+
+
+
+
+
+
+
+
+
+ <Footer/>
+        </div>
+     
+
+      </div>
+
+
+ 
+
+
+   
+    </div>
+   
+  </div>
+</>
+
     </div>
   );
 }
