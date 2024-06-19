@@ -13,6 +13,7 @@ function App() {
 
   const [movieList,setMovieList]=useState(movies)
 
+  const [searchTitle,setSearchTitle]=useState('')
   console.log('movieList',movieList)
 
 
@@ -25,6 +26,7 @@ setMovieList(
 const addMovie=(newMovie)=>{
   setMovieList([...movieList,newMovie])
 }
+
 
   return (
     <div className="App">
@@ -39,28 +41,11 @@ const addMovie=(newMovie)=>{
              <div className="movie-list">
          <TitleBar/>
           
+         <MovieSearch  setSearchTitle={setSearchTitle}   /> 
 
-
-
-
-
-         <MovieSearch/> 
-
-
-<MovieList removeMovie={removeMovie}  movieList={movieList} />
+<MovieList removeMovie={removeMovie}  movieList={movieList}  searchTitle={searchTitle}   />
 
 <MovieAdd  addMovie={addMovie}   /> 
-
-
-
-
-
-
-
-
-
-
-
 
  <Footer/>
         </div>

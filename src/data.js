@@ -9,23 +9,24 @@ export const movies= [
     {
                  id :  2 ,
                  Title :  "Me3an" ,
-                 Description :  "science fiction horror" ,
+                 Description : "scienceFiction" ,
                  PosterURL :  "https://th.bing.com/th/id/OIP.SC4_7HPZwfIANrCLcF6AgwHaJQ?pid=ImgDet&rs=1" ,
                  Rate :  4 ,
     },
+  
     {
                  id :  3 ,
                  Title :  "The witcher" ,
 
                  Description :  "action" ,
                  PosterURL : "https://es.web.img2.acsta.net/pictures/19/11/22/09/33/5060052.jpg" ,
-                 Rate :  5 ,
+                 Rate :  5
     },
     {
                  id : 4 ,
                  Title :  "black panther wakanda forever"  ,
 
-                 Description :  "Action" ,
+                 Description :  "action" ,
                  PosterURL : "https://lumiere-a.akamaihd.net/v1/images/blackpanther-wakandaforever_payoff_1-sht_v10_lg_c5ec6aef.jpeg?region=0%2C0%2C1688%2C2500" ,
                  Rate :  3 , 
     },
@@ -42,7 +43,7 @@ export const movies= [
                      id :  6 ,
                      Title :  "avatar the way of water" ,
 
-                    Description:  "Science fiction" ,
+                    Description:  "scienceFiction" ,
                      PosterURL :  "https://upload.wikimedia.org/wikipedia/en/5/54/Avatar_The_Way_of_Water_poster.jpg",
                      Rate :  5 ,
 
